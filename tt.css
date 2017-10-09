@@ -1,0 +1,81 @@
+body {}
+
+.square {
+    height: 200px;
+    width: 200px;
+    background-color: #FF0;
+    border: 5px solid black;
+    /* transform property allows you to apply a cool transformation to an otherwise rectangular element */
+    /* 1. rotate */
+    /* 2. Scale */
+    /* 3. Skew */
+    /* Translate */
+}
+
+
+/* arg is degrees */
+
+.rotate {
+    transform: rotate(45deg);
+    /* you can also rotateX or rotateY --- this will be used to create 3D effects */
+}
+
+
+/* arg is in % how large or small tomake it relatvive */
+
+.scale {
+    transform: scale(2);
+    /* There is allow a scaleX and scaleY prop */
+    /* if you pass two args, first is X and second is Y */
+}
+
+
+/* skew the object based on degree arg */
+
+.skew {
+    transform: skew(45deg);
+}
+
+
+/* move an object */
+
+.translate {
+    transform: translate(200px, 100px);
+}
+
+.ball {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    background-color: teal;
+    color: white;
+    text-align: center;
+    /* transition - will make the browser apply a trnaform with math over X period of time. You ust be going from A --> B to apply any math  */
+    /* transition takes 2 args:  */
+    /* 1. which transforms to transition */
+    /* 2. how long to take to get to point B */
+    transition: all 2s;
+}
+
+.ball:hover {
+    transform: rotate(180deg);
+    background-color: red;
+    border-radius: 50%;
+    margin-left: 500px;
+}
+
+
+/* optional 3 arg controls accel of transition */
+
+.ease {
+    transition: all 4s ease-in
+}
+
+.ease-out {
+    transition: all 1s ease-out;
+}
+
+.what-the {
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1)
+}
